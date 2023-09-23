@@ -32,10 +32,11 @@ public class MainActivity extends AppCompatActivity {
                 if (second_input == 0) {
                     String str = "Error: Cannot divide by 0";
                     goToActivity(str);
+                } else {
+                    float flt = (float)first_input / (float)second_input;
+                    String str = Float.toString(flt);
+                    goToActivity(str);
                 }
-                float flt = (float)first_input / (float)second_input;
-                String str = Float.toString(flt);
-                goToActivity(str);
             }
         } catch (Exception e) {
             Toast.makeText(MainActivity.this, "Error: Both entries must be integers", Toast.LENGTH_LONG).show();
